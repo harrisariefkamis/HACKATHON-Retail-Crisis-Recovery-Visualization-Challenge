@@ -1,5 +1,7 @@
 # HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge
 
+link PPT: https://docs.google.com/presentation/d/1X8R9jOZE33pEPhjBl8QiJ-9SpBr2pKJRDgdisbm7b_c/edit?usp=sharing
+
 ---
 Retail Crisis & Recovery-Visualization Challenge with Python
 Pada program ini, peserta tidak hanya fokus membuat visualisasi yang menarik secara estetika, namun juga memastikan setiap analisis memiliki dasar yang kuat, relevan dengan konteks bisnis, dan mampu menjawab pertanyaan penting yang benar-benar dibutuhkan oleh pengambil keputusan.
