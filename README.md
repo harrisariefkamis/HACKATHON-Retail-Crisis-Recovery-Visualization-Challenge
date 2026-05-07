@@ -35,6 +35,6 @@ Data Understanding
 1. Data Cleansing
 2. Data Processing
 3. Data Analysis
----
 5. Data Visualization
 6. Decision Making
+---
