@@ -13,11 +13,11 @@ Pada program ini, peserta tidak hanya fokus membuat visualisasi yang menarik sec
 
 # Kenapa Kamu WAJIB Ikut? 
 
-Selesaikan Masalah Industri Nyata: Hadapi case real dari Retail, Fintech, Kredit & Supply Chain.
-Bangun End to End Data Pipeline: Dari data mentah hingga insight siap pakai.
-Portfolio yang Menjual: Hasilkan GitHub project, case study, & demo untuk recruiter.
-Recognition & Credibility: Buktikan skill lewat leaderboard & sertifikat.
-Reward Menarik: Menangkan uang tunai & sertifikasi Data Analyst.
+- Selesaikan Masalah Industri Nyata: Hadapi case real dari Retail, Fintech, Kredit & Supply Chain.
+- Bangun End to End Data Pipeline: Dari data mentah hingga insight siap pakai.
+- Portfolio yang Menjual: Hasilkan GitHub project, case study, & demo untuk recruiter.
+- Recognition & Credibility: Buktikan skill lewat leaderboard & sertifikat.
+- Reward Menarik: Menangkan uang tunai & sertifikasi Data Analyst.
 ---
 
 # Generate Library Python 
