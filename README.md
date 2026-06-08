@@ -1,6 +1,6 @@
 # HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge
 
-link PPT: https://docs.google.com/presentation/d/1X8R9jOZE33pEPhjBl8QiJ-9SpBr2pKJRDgdisbm7b_c/edit?usp=sharing
+link PPT:
 
 ---
 Retail Crisis & Recovery-Visualization Challenge with Python
