@@ -40,6 +40,7 @@ graph TD
     F --> G[5. Visualisasi & Automated Export]
     G --> G1[Laporan: retail-insight.xlsx]
     G --> G2[Grafik Tren: PNG Plots]
+```
 
 Data Understanding & Cleansing: Membaca data log transaksi, penanganan tipe data penanggalan, dan melakukan agregasi total nilai penjualan harian per item produk.
 
