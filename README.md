@@ -1,6 +1,6 @@
 # HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge
 
-link PPT:
+DASHBOARD PLANT:https://retail-growth-association-panel-142260617876.asia-southeast1.run.app
 
 ---
 Retail Crisis & Recovery-Visualization Challenge with Python
