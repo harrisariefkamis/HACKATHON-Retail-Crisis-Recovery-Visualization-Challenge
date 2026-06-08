@@ -59,8 +59,7 @@ Decision Making & Reporting: Pembuatan dokumen laporan final otomatis dan pembua
 🚀 Cara Menjalankan Project (Local Setup)
 Pastikan Anda memiliki lingkungan Python 3.8 atau versi di atasnya.
 
-Klona repositori:
-git clone: (https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge)
+pergi ke Repositori:(https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge)
 
 Pasang semua pustaka dependen yang dibutuhkan:
 
