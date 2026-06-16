@@ -41,46 +41,46 @@ graph TD
     G --> G1[Laporan: retail-insight.xlsx]
     G --> G2[Grafik Tren: PNG Plots]
 ```
-
-Data Understanding & Cleansing: Membaca data log transaksi, penanganan tipe data penanggalan, dan melakukan agregasi total nilai penjualan harian per item produk.
-
-Data Processing (Smoothing & Base-100): * Menggunakan 3-Day Moving Average (.rolling(window=3).mean()) guna meredam volatilitas harian agar tren utama terlihat jelas.Menerapkan Normalisasi Indeks (Base 100) untuk menyetarakan skala perbandingan laju pertumbuhan produk murah vs mahal secara adil.
-
-Data Analysis (Dual-Engine):Engine 1 (Rising Star): Melacak performa krisis (crisis) dan pemulihan (recovery) tren lewat deteksi diferensiasi harian (.diff() > 0) menggunakan fungsi kustom rentetan berurutan.Engine 2 (Apriori):Mengubah data menjadi matriks One-Hot Encoding dan menyaring kombinasi dengan ambang batas Support $\ge$ 1%.
-
-Cross-Filtering Validation: Aturan paket produk yang terbentuk secara ketat disaring kembali untuk memastikan kekuatan asosiasi yang mutlak (Nilai Lift $\ge$ 2.0) serta wajib mengandung minimum satu produk Rising Star.
-
-Decision Making & Reporting: Pembuatan dokumen laporan final otomatis dan pembuatan grafik visualisasi tren pertumbuhan.📈 Visualisasi & Hasil Analisis (Artifacts)Pipeline ini secara otomatis mengekspor visualisasi data ke dalam direktori kerja untuk kebutuhan pelaporan manajemen:
-
+# Data Understanding & Cleansing: 
+Membaca data log transaksi, penanganan tipe data penanggalan, dan melakukan agregasi total nilai penjualan harian per item produk.
+# Data Processing (Smoothing & Base-100):
+Menggunakan 3-Day Moving Average (.rolling(window=3).mean()) guna meredam volatilitas harian agar tren utama terlihat jelas.Menerapkan Normalisasi Indeks (Base 100) untuk menyetarakan skala perbandingan laju pertumbuhan produk murah vs mahal secara adil.
+# Data Analysis (Dual-Engine):Engine 1 (Rising Star): 
+Melacak performa krisis (crisis) dan pemulihan (recovery) tren lewat deteksi diferensiasi harian (.diff() > 0) menggunakan fungsi kustom rentetan berurutan.Engine 2 (Apriori):Mengubah data menjadi matriks One-Hot Encoding dan menyaring kombinasi dengan ambang batas Support $\ge$ 1%.
+# Cross-Filtering Validation: 
+Aturan paket produk yang terbentuk secara ketat disaring kembali untuk memastikan kekuatan asosiasi yang mutlak (Nilai Lift $\ge$ 2.0) serta wajib mengandung minimum satu produk Rising Star.
+# Decision Making & Reporting: 
+Pembuatan dokumen laporan final otomatis dan pembuatan grafik visualisasi tren pertumbuhan.📈 Visualisasi & Hasil Analisis (Artifacts)Pipeline ini secara otomatis mengekspor visualisasi data ke dalam direktori kerja untuk kebutuhan pelaporan manajemen:
+---
 1. Grafik Pertumbuhan Relatif (rising_star_index.png)Menampilkan pergerakan indeks pertumbuhan kumulatif (Base 100) produk-produk Rising Star terbaik yang disandingkan langsung dengan performa rata-rata dari Top 3 Sales toko sebagai tolok ukur (benchmark). Pewarnaan garis grafik menggunakan palet khusus berbasis medali peringkat (Emas, Perak, Perunggu).
 2. Grafik Nilai Penjualan Riil (rising_star_actual.png)Memberikan konfirmasi validitas volume pendapatan kepada manajemen mengenai kontribusi nominal mata uang (Rupiah asli) dari produk-produk yang sedang naik daun tersebut terhadap total omzet bisnis harian.
 3. Automated Spreadsheet Report (retail-insight.xlsx)Laporan terformat rapi yang mencakup dua lembar kerja (sheets): Rising Star dan Potential Packaging. Dilengkapi fungsi estetika otomatis seperti penyesuaian lebar kolom (auto-fit), penebalan kepala tabel (bold headers), pembekuan baris (freeze panes), serta standarisasi format desimal dan pemisah ribuan.
-
-🚀 Cara Menjalankan Project (Local Setup)
+---
+## 🚀 Cara Menjalankan Project (Local Setup)
 Pastikan Anda memiliki lingkungan Python 3.8 atau versi di atasnya.
-
 pergi ke Repositori:(https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge)
 
-Pasang semua pustaka dependen yang dibutuhkan:
-
-Bash
+---
+# Pasang semua pustaka dependen yang dibutuhkan:
+jalankan Bash:
+```
 pip install pandas numpy matplotlib openpyxl mlxtend
 Tempatkan berkas data transaksi Anda dengan nama data_penjualan.xlsx (pastikan struktur sheet bernama Transaksi) di dalam direktori utama.
-
+```
 Jalankan skrip pipeline:
-
+```
 Bash
 python solusi_retail.py
+```
 
+---
+##💡 Key Insights & Strategi Bisnis Masa Depan
+1. Aksi Taktis Bundling: Tim operasional toko dan pemasaran digital e-commerce dapat langsung menerapkan skema promo bundling fisik berdasarkan tabel Top 10 Packaging Recommendation yang terbukti memiliki nilai keterikatan belanja tinggi.
+2. Alokasi Manajemen Inventaris: Memberikan sinyal proaktif bagi tim gudang (inventory) untuk segera menaikkan kapasitas stok pengaman (safety stock) terhadap produk pemenang Rank 1-3 demi mengantisipasi potensi kehilangan momentum penjualan akibat kehabisan barang (out-of-stock).
+3. Subsidi Silang Pemasaran: Memanfaatkan profit margin yang stabil dari produk pokok (staple goods) ber-volume tinggi untuk mendanai biaya promosi produk Rising Star pasangannya, guna merebut pangsa pasar kompetitor secara agresif.
 
-💡 Key Insights & Strategi Bisnis Masa Depan
-Aksi Taktis Bundling: Tim operasional toko dan pemasaran digital e-commerce dapat langsung menerapkan skema promo bundling fisik berdasarkan tabel Top 10 Packaging Recommendation yang terbukti memiliki nilai keterikatan belanja tinggi.
-
-Alokasi Manajemen Inventaris: Memberikan sinyal proaktif bagi tim gudang (inventory) untuk segera menaikkan kapasitas stok pengaman (safety stock) terhadap produk pemenang Rank 1-3 demi mengantisipasi potensi kehilangan momentum penjualan akibat kehabisan barang (out-of-stock).
-
-Subsidi Silang Pemasaran: Memanfaatkan profit margin yang stabil dari produk pokok (staple goods) ber-volume tinggi untuk mendanai biaya promosi produk Rising Star pasangannya, guna merebut pangsa pasar kompetitor secara agresif.
-
-Proyek ini merupakan bagian dari portofolio profesional Data Analytics. Silakan hubungi saya melalui LinkedIn jika ada pertanyaan lebih lanjut terkait arsitektur pipeline ini.
+## Proyek ini merupakan bagian dari portofolio profesional Data Analytics. 
+## Silakan hubungi saya melalui LinkedIn jika ada pertanyaan lebih lanjut terkait arsitektur pipeline ini.
 
 ***
 
