@@ -1,9 +1,9 @@
 # 📊 Bangun Infrastruktur End-to-End Retail Data Pipeline: Time-Series Trend Detection & Market Basket Analysis
-
+---
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org)
 [![Licence](https://img.shields.io/badge/licence-MIT-green.svg)](LICENSE)
 ![image](https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge/blob/main/retail-insight-dashboard-overview.jpeg)
-
+---
 Anomali data harian dan fluktuasi pasar sering kali menyamarkan tren produk potensial yang sesungguhnya. Proyek ini membangun sebuah *End-to-End Data Pipeline* otomatis menggunakan Python untuk mengolah data *time-series* penjualan retail yang kompleks dan *noisy*. Sistem ini secara cerdas mengintegrasikan dua mesin analisis bisnis: **Trend Tracking (Moving Average)** untuk mendeteksi performa *Rising Star*, dan **Market Basket Analysis (Algoritma Apriori)** untuk merumuskan strategi paket produk (*product bundling*) berbasis keterikatan statistik yang kuat.
 
 ---
@@ -51,17 +51,17 @@ Melacak performa krisis (crisis) dan pemulihan (recovery) tren lewat deteksi dif
 Aturan paket produk yang terbentuk secara ketat disaring kembali untuk memastikan kekuatan asosiasi yang mutlak (Nilai Lift $\ge$ 2.0) serta wajib mengandung minimum satu produk Rising Star.
 ## Decision Making & Reporting: 
 Pembuatan dokumen laporan final otomatis dan pembuatan grafik visualisasi tren pertumbuhan.📈 Visualisasi & Hasil Analisis (Artifacts)Pipeline ini secara otomatis mengekspor visualisasi data ke dalam direktori kerja untuk kebutuhan pelaporan manajemen:
----
+
 1. Grafik Pertumbuhan Relatif (rising_star_index.png)Menampilkan pergerakan indeks pertumbuhan kumulatif (Base 100) produk-produk Rising Star terbaik yang disandingkan langsung dengan performa rata-rata dari Top 3 Sales toko sebagai tolok ukur (benchmark). Pewarnaan garis grafik menggunakan palet khusus berbasis medali peringkat (Emas, Perak, Perunggu).
 2. Grafik Nilai Penjualan Riil (rising_star_actual.png)Memberikan konfirmasi validitas volume pendapatan kepada manajemen mengenai kontribusi nominal mata uang (Rupiah asli) dari produk-produk yang sedang naik daun tersebut terhadap total omzet bisnis harian.
 3. Automated Spreadsheet Report (retail-insight.xlsx)Laporan terformat rapi yang mencakup dua lembar kerja (sheets): Rising Star dan Potential Packaging. Dilengkapi fungsi estetika otomatis seperti penyesuaian lebar kolom (auto-fit), penebalan kepala tabel (bold headers), pembekuan baris (freeze panes), serta standarisasi format desimal dan pemisah ribuan.
----
+
 ## 🚀 Cara Menjalankan Project (Local Setup)
 Pastikan Anda memiliki lingkungan Python 3.8 atau versi di atasnya.
 pergi ke Repositori:(https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge)
 
 ---
-## Pasang semua pustaka dependen yang dibutuhkan:
+Pasang semua pustaka dependen yang dibutuhkan:
 jalankan Bash:
 ```
 pip install pandas numpy matplotlib openpyxl mlxtend
@@ -78,11 +78,18 @@ python solusi_retail.py
 2. Alokasi Manajemen Inventaris: Memberikan sinyal proaktif bagi tim gudang (inventory) untuk segera menaikkan kapasitas stok pengaman (safety stock) terhadap produk pemenang Rank 1-3 demi mengantisipasi potensi kehilangan momentum penjualan akibat kehabisan barang (out-of-stock).
 3. Subsidi Silang Pemasaran: Memanfaatkan profit margin yang stabil dari produk pokok (staple goods) ber-volume tinggi untuk mendanai biaya promosi produk Rising Star pasangannya, guna merebut pangsa pasar kompetitor secara agresif.
 
-## Proyek ini merupakan bagian dari portofolio profesional Data Analytics. 
-Silakan hubungi saya melalui LinkedIn jika ada pertanyaan lebih lanjut terkait arsitektur pipeline ini.
-
 ## 💡 Tips Tambahan Sebelum Melakukan Push ke GitHub:
-1. Ganti tautan `https://github.com/username-anda/nama-repo-anda.git` dengan URL repositori asli Anda.
+1. Ganti tautan `(https://github.com/harrisariefkamis)` dengan URL repositori asli Anda.
 2. Setelah Anda menjalankan skrip `solusi_retail.py` secara lokal dan berkas gambar `rising_star_index.png` serta `rising_star_actual.png` terbentuk, Anda bisa menyisipkan gambar tersebut ke dalam Markdown dengan menambahkan baris sintaks berikut di bawah deskripsi grafik masing-masing agar portofolio Anda semakin memikat secara visual:
    ```markdown
    ![Grafik Indeks Pertumbuhan](rising_star_index.png)
+   ```
+
+
+
+## Proyek ini merupakan bagian dari portofolio saya
+Silakan hubungi saya melalui Media Sosial.jika ada pertanyaan lebih lanjut..
+Haris Arief Kamis
+Data Analysis
+Bogor Timur, Kota Bogor, 16144 | +6285282436796 | harisariefkamis16@gmail.com
+(www.linkedin.com/in/harisariefkamis) | (https://github.com/harrisariefkamis)| (https://bit.ly/WebsitePortofolioDataAnalys)
