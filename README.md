@@ -41,7 +41,7 @@ graph TD
     G --> G1[Laporan: retail-insight.xlsx]
     G --> G2[Grafik Tren: PNG Plots]
 ```
-# Data Understanding & Cleansing: 
+## Data Understanding & Cleansing: 
 Membaca data log transaksi, penanganan tipe data penanggalan, dan melakukan agregasi total nilai penjualan harian per item produk.
 # Data Processing (Smoothing & Base-100):
 Menggunakan 3-Day Moving Average (.rolling(window=3).mean()) guna meredam volatilitas harian agar tren utama terlihat jelas.Menerapkan Normalisasi Indeks (Base 100) untuk menyetarakan skala perbandingan laju pertumbuhan produk murah vs mahal secara adil.
