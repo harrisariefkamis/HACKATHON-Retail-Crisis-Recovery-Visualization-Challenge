@@ -5,7 +5,11 @@
 [![Time Series](https://img.shields.io/badge/Time%20Series-Moving%20Average-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)]()
 
-Instrumen analitik mutakhir untuk mengekstrak wawasan komersial dari data transaksi ritel. Proyek ini memadukan **Analisis Tren Waktu (Time Series)** menggunakan metode rata-rata bergerak untuk mendeteksi momentum kenaikan penjualan produk target secara beruntun, serta **Market Basket Analysis (Data Mining)** dengan algoritma Apriori untuk mengidentifikasi perilaku belanja silang (*cross-selling*) pelanggan.
+<p align="center">
+  <img src="[https://portfolio-analisis-retail-dashboard-142260617876.asia-southeast1.run.app/]"alt="Dashboard Portofolio Analyst Retail" width="50%">
+</p>
+
+Infrastruktur End to End Project ini memadukan **Analisis Tren Waktu (Time Series)** menggunakan metode rata-rata bergerak untuk mendeteksi momentum kenaikan penjualan produk target secara beruntun, serta **Market Basket Analysis (Data Mining)** dengan algoritma Apriori untuk mengidentifikasi perilaku belanja silang (*cross-selling*) pelanggan.
 
 ---
 
