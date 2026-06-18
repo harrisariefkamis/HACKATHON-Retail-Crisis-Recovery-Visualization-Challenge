@@ -57,10 +57,9 @@ Pembuatan dokumen laporan final otomatis dan pembuatan grafik visualisasi tren p
 3. Automated Spreadsheet Report (retail-insight.xlsx)Laporan terformat rapi yang mencakup dua lembar kerja (sheets): Rising Star dan Potential Packaging. Dilengkapi fungsi estetika otomatis seperti penyesuaian lebar kolom (auto-fit), penebalan kepala tabel (bold headers), pembekuan baris (freeze panes), serta standarisasi format desimal dan pemisah ribuan.
 
 ## 🚀 Cara Menjalankan Project (Local Setup)
----
 Pastikan Anda memiliki lingkungan Python 3.8 atau versi di atasnya.
 pergi ke Repositori:(https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge)
----
+
 Pasang semua pustaka dependen yang dibutuhkan:
 jalankan Bash:
 ```
