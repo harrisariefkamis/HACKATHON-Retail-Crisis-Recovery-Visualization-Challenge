@@ -1,4 +1,3 @@
-```markdown
 # 📊 Retail Data Analytics: Consecutive Rise Trend & Market Basket Analysis (Apriori)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -83,7 +82,7 @@ $$\text{Lift}(A \implies B) = \frac{P(A \cap B)}{P(A) \times P(B)}$$
 ### 1. Kloning Repositori
 
 ```bash
-git clone [https://github.com/username-anda/nama-repositori.git](https://github.com/username-anda/nama-repositori.git)
+git clone [https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge.git](https://github.com/harrisariefkamis/HACKATHON-Retail-Crisis-Recovery-Visualization-Challenge.git)
 cd nama-repositori
 
 ```
