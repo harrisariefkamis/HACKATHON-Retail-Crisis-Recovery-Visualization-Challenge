@@ -83,14 +83,11 @@ python solusi_retail.py
    ```markdown
    ![Grafik Indeks Pertumbuhan](rising_star_index.png)
    ```
-
-
-
+```html
 ## Proyek ini merupakan bagian dari portofolio saya
 Silakan hubungi saya melalui Media Sosial.jika ada pertanyaan lebih lanjut..
----
 Haris Arief Kamis
 Data Analysis
 Bogor Timur, Kota Bogor, 16144 | +6285282436796 | harisariefkamis16@gmail.com
 www.linkedin.com/in/harisariefkamis | https://github.com/harrisariefkamis| https://bit.ly/WebsitePortofolioDataAnalys
----
+```
