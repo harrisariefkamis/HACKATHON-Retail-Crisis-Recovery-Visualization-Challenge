@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio Analisis Retail Dashboard",
+  "description": "Consecutive Rise and Market Basket Association Rules Analysis Dashboard using Apriori algorithm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
