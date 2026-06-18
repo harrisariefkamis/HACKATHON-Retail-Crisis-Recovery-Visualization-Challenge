@@ -15,7 +15,7 @@ Infrastruktur End to End Project ini memadukan **Analisis Tren Waktu (Time Serie
 
 ## 🎯 7 Pilar Analisis Utama
 
-Sistem otomatisasi ini dirancang dengan mengeksekusi runtunan logika analitik berikut:
+Framework data analsisis ini saya bangun dengan pendekatan Data Understanding,Problem Solving dan Decision Making untuk memnbangun sistem otomatisasi yang dirancang dengan mengeksekusi runtunan logika analitik berikut:
 1. **Penyaringan & Agregasi**: Melakukan ekstraksi otomatis pada produk target (`ARAB250gr`) dan mengagregasikan nilai omzet harian (*Sum of Total Nilai*).
 2. **Kalkulasi Moving Average (MA)**: Menghitung rata-rata bergerak 3 hari untuk mereduksi *noise* fluktuasi harian yang tidak beraturan.
 3. **Pemuatan Data Fleksibel**: Membaca file data terstruktur (`data_penjualan.csv`) dengan pembatas titik koma (`;`) serta menangani variasi format tanggal.
