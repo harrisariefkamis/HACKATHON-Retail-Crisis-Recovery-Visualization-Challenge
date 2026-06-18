@@ -1,6 +1,6 @@
 # 📊 Bangun Infrastruktur End-to-End Retail Data Pipeline: Time-Series Trend Detection & Market Basket Analysis
 ---
-
+!([Request])(https://portfolio-analisis-retail-dashboard-142260617876.asia-southeast1.run.app/)
 Anomali data harian dan fluktuasi pasar sering kali menyamarkan tren produk potensial yang sesungguhnya. Proyek ini membangun sebuah *End-to-End Data Pipeline* otomatis menggunakan Python untuk mengolah data *time-series* penjualan retail yang kompleks dan *noisy*. Sistem ini secara cerdas mengintegrasikan dua mesin analisis bisnis: **Trend Tracking (Moving Average)** untuk mendeteksi performa *Rising Star*, dan **Market Basket Analysis (Algoritma Apriori)** untuk merumuskan strategi paket produk (*product bundling*) berbasis keterikatan statistik yang kuat.
 
 ---
