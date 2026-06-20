@@ -1,5 +1,5 @@
-Consecutive Rise Analysis:
-1.tampilkan filter produk (ARAB250gr),Agregasi Harian(sum of total nilai)
+#Consecutive Rise Analysis:
+1. tampilkan filter produk (ARAB250gr),Agregasi Harian(sum of total nilai)
 2. Menghitung Moving Average(MA):menghitung rata-rata bergerak 3 hari untuk menghaluskan fluktuasi penjualan harian.
 3. Membaca file excel dan identifikasi penjualan yang naik secara berturut
 4.identifikasi tren naik:menentukan apakah MA ini lebih besar dari hari kemarin
