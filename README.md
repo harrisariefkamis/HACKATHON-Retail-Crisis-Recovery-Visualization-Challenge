@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)]()
 
 <p align="center">
-  <img src="[workflow hackathon python.png]"alt="Dashboard Portofolio Analyst Retail" width="50%">
+  <img src="[workflow hackathon python.png]"alt="Dashboard Portofolio Analyst Retail" width="500%">
 </p>
 
 <p align="center">
