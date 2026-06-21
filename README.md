@@ -5,7 +5,9 @@
 [![Time Series](https://img.shields.io/badge/Time%20Series-Moving%20Average-green.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)]()
 
-<img src="workflow hackathon python.png" alt="Market Based Analisis" width="400">
+<p align="center">
+  <img src="[workflow hackathon python.png]"alt="Dashboard Portofolio Analyst Retail" width="50%">
+</p>
 
 <p align="center">
   <img src="[https://portfolio-analisis-retail-dashboard-142260617876.asia-southeast1.run.app/]"alt="Dashboard Portofolio Analyst Retail" width="50%">
