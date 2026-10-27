@@ -1,4 +1,4 @@
-# 📊 Retail Data Analytics: Consecutive Rise Trend & Market Basket Analysis (Apriori)
+# Retail Data Analytics: Consecutive Rise Trend & Market Basket Analysis (Apriori)
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Data Mining](https://img.shields.io/badge/Data%20Mining-Apriori-orange.svg)]()
