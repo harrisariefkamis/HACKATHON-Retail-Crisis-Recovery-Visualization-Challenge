@@ -1,6 +1,6 @@
 ## Metodologi Analisis
 
-## 1. Perhitungan Tren & Moving AverageUntuk 
+## 1. Perhitungan Tren & Moving Average
 Mereduksi noise dari penjualan harian,digunakan formula Simple Moving Average dengan jendela waktu 3 hari
 ```rumus
 ($w=3$):$$\text{MA}_{3} = \frac{Y_{t} + Y_{t-1} + Y_{t-2}}{3}$$
