@@ -1,4 +1,4 @@
-## 📊 Metodologi Analisis
+## Metodologi Analisis
 
 ## 1. Perhitungan Tren & Moving AverageUntuk 
 Mereduksi noise dari penjualan harian,digunakan formula Simple Moving Average dengan jendela waktu 3 hari
