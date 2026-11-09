@@ -1,0 +1,61 @@
+name: Update retail analysis reports
+
+on:
+  push:
+    paths:
+      - "data_penjualan.csv"
+      - "solusi_retail.py"
+      - ".github/workflows/update-retail-reports.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-commit-reports:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install analysis libraries
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pandas==2.3.1 matplotlib==3.10.7 mlxtend==0.23.4 openpyxl==3.1.5
+
+      - name: Prepare Excel input expected by the analysis script
+        run: |
+          python - <<'PY'
+          import pandas as pd
+
+          data = pd.read_csv("data_penjualan.csv", sep=";")
+          data.to_excel("data_penjualan.xlsx", sheet_name="Transaksi", index=False)
+          PY
+
+      - name: Run retail analysis
+        run: python solusi_retail.py
+
+      - name: Normalize report filename and verify outputs
+        run: |
+          test -f retail-insight.xlsx
+          mv retail-insight.xlsx retail_insight.xlsx
+          test -f rising_star_index.png
+          test -f rising_star_actual.png
+          rm -f data_penjualan.xlsx
+
+      - name: Commit generated reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add retail_insight.xlsx rising_star_index.png rising_star_actual.png
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "Update generated retail analysis reports"
+            git push
+          fi
