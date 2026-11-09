@@ -4,16 +4,18 @@ on:
   push:
     paths:
       - "data_penjualan.csv"
+      - "sales_transaction.csv"
       - "solusi_retail.py"
       - ".github/workflows/update-retail-reports.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
+
 concurrency:
   group: retail-reports-${{ github.ref }}
   cancel-in-progress: false
-  
+
 jobs:
   generate-and-commit-reports:
     runs-on: ubuntu-latest
@@ -33,36 +35,45 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pandas==2.3.1 matplotlib==3.10.7 mlxtend==0.23.4 openpyxl==3.1.5
 
-      - name: Prepare Excel input expected by the analysis script
+      - name: Generate and push reports
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
-          python - <<'PY'
-          import pandas as pd
+          set -e
 
-          data = pd.read_csv("data_penjualan.csv", sep=";")
-          data.to_excel("data_penjualan.xlsx", sheet_name="Transaksi", index=False)
-          PY
-
-      - name: Run retail analysis
-        run: python solusi_retail.py
-
-      - name: Verify generated outputs
-        run: |
-          test -f retail_insight.xlsx
-          test -f rising_star_index.png
-          test -f rising_star_actual.png
-
-      - name: Commit and push generated reports
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add retail_insight.xlsx rising_star_index.png rising_star_actual.png
 
-          if git diff --cached --quiet; then
-            echo "No report changes to commit."
-            exit 0
-          fi
+          for attempt in 1 2 3; do
+            echo "Report generation attempt ${attempt}"
 
-          git commit -m "Update generated retail analysis reports"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+            # Mulai dari keadaan terbaru di remote agar tidak me-rebase
+            # atau mencoba menggabungkan file Excel biner.
+            git fetch origin "$BRANCH"
+            git reset --hard "origin/$BRANCH"
+
+            python solusi_retail.py
+
+            test -f retail_insight.xlsx
+            test -f rising_star_index.png
+            test -f rising_star_actual.png
+
+            git add retail_insight.xlsx rising_star_index.png rising_star_actual.png
+
+            if git diff --cached --quiet; then
+              echo "No report changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Update generated retail analysis reports"
+
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "Generated reports pushed successfully."
+              exit 0
+            fi
+
+            echo "Push failed; will fetch the latest branch and regenerate reports."
+          done
+
+          echo "Unable to push generated reports after 3 attempts."
+          exit 1
