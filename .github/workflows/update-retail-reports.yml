@@ -10,13 +10,18 @@ on:
 
 permissions:
   contents: write
-
+concurrency:
+  group: retail-reports-${{ github.ref }}
+  cancel-in-progress: false
+  
 jobs:
   generate-and-commit-reports:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,14 +51,18 @@ jobs:
           test -f rising_star_index.png
           test -f rising_star_actual.png
 
-      - name: Commit generated reports
+      - name: Commit and push generated reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add retail_insight.xlsx rising_star_index.png rising_star_actual.png
+
           if git diff --cached --quiet; then
             echo "No report changes to commit."
-          else
-            git commit -m "Update generated retail analysis reports"
-            git push
+            exit 0
           fi
+
+          git commit -m "Update generated retail analysis reports"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
