@@ -40,13 +40,11 @@ jobs:
       - name: Run retail analysis
         run: python solusi_retail.py
 
-      - name: Normalize report filename and verify outputs
+      - name: Verify generated outputs
         run: |
-          test -f retail-insight.xlsx
-          mv retail-insight.xlsx retail_insight.xlsx
+          test -f retail_insight.xlsx
           test -f rising_star_index.png
           test -f rising_star_actual.png
-          rm -f data_penjualan.xlsx
 
       - name: Commit generated reports
         run: |
